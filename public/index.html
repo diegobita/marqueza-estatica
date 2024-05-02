@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			
+			<title>Marqueza</title>
+ 
+			<!-- Bootstrap core CSS -->
+			<link href="./bootstrap.min.css" rel="stylesheet">
+			<!--start:GoogleFonts -->
+			<link href="./css(1)" rel="stylesheet" type="text/css">
+			<!--end:GoogleFonts -->
+			<!-- Enlaza Material Icons -->
+			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300" rel="stylesheet" />
+
+			<style>
+				@font-face {
+					font-family: 'Athelas';
+					src: url('AthelasArabic-Book.woff2') format('woff2');
+					/* Agrega otros formatos de fuente si los tienes disponibles */
+					font-weight: normal;
+					font-style: normal;
+				}
+
+				body {		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+							color: #000000;
+							font-weight: 300;
+							background-color: #000000;
+				}
+				header {
+					background-color: #000000;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+					width: 100%;
+					height: 50px;
+				}
+				#logo {
+					margin: auto; 
+				}
+				.icon {
+					color:rgb(228, 225, 225);
+					margin-right: 10px;
+					cursor: pointer;
+				}
+				.billboard {
+					position: fixed;
+					top: 80px;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: 0 auto;
+					width: 70%;
+					height: 60%;
+					background: rgba(0, 0, 0, 0.4);
+					padding: 15px;
+					justify-content: center;
+					align-items: center;
+					z-index: 99999;
+				}
+				h1 {
+					color: white;
+					font-size: 20px;
+					margin-bottom: 20px;
+					margin-top: 0;
+				}
+				h5 {
+					color: white;
+					font-size: 12px;
+					margin-bottom: 20px;
+					margin-top: 0;
+				}
+				@media screen and (min-width: 401px) {
+					h1 {
+						font-size: 30px;
+					}
+					h5 {
+						font-size: 15px;
+					}
+    			}
+	
+			</style>
+	</head>
+
+	<body>
+  
+		<header >
+			<div  id="logo"><img src="./Imagen5.png" width="150px" class="img-responsive"></div>
+			<div style="position: absolute;">
+				<span class="icon material-symbols-outlined">search</span>
+				<span class="icon material-symbols-outlined">shopping_cart</span>
+			</div>
+	
+			
+		</header>
+		
+		<picture>
+			<source srcset="/imagenMobile.jpg" media="(max-width:400px)">
+			<img src="./imagen.jpg" width="100%" class="img-responsive">
+		</picture>
+
+		<div id="billboard" class="billboard">
+			<span onclick="ocultar()" stu class="icon material-symbols-outlined" style="cursor: pointer;">close</span>
+			<center><h1>Feliz Cumpleaños!</h1></center>
+			<h5>El tallarine te regala tu tienda online</h5>
+		</div>
+
+		<script>
+			function ocultar() {
+			  var  div = document.getElementById("billboard");
+			  div.style.display = "none";
+			}
+		  </script>
+
+	</body>
+</html>
