@@ -38,6 +38,14 @@
 					width: 100%;
 					height: 50px;
 				}
+				footer {
+					background-color: #000000;
+					color: #fff;
+					padding: 20px;
+					text-align: center;
+					bottom: 0;
+					width: 100%;
+				}
 				#logo {
 					margin: auto; 
 				}
@@ -48,13 +56,14 @@
 				}
 				.billboard {
 					position: fixed;
-					top: 80px;
-					left: 0;
+					top: 50%;
+					left: 50%;
 					right: 0;
 					bottom: 0;
 					margin: 0 auto;
-					width: 70%;
-					height: 60%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+					height: 200px;
 					background: rgba(0, 0, 0, 0.4);
 					padding: 15px;
 					justify-content: center;
@@ -63,22 +72,23 @@
 				}
 				h1 {
 					color: white;
-					font-size: 20px;
+					font-size: 30px;
 					margin-bottom: 20px;
 					margin-top: 0;
 				}
 				h5 {
 					color: white;
-					font-size: 12px;
+					font-size: 15px;
 					margin-bottom: 20px;
 					margin-top: 0;
+					padding-bottom: 50px;
 				}
 				@media screen and (min-width: 401px) {
 					h1 {
-						font-size: 30px;
+						font-size: 40px;
 					}
 					h5 {
-						font-size: 15px;
+						font-size: 18px;
 					}
     			}
 	
@@ -88,7 +98,7 @@
 	<body>
   
 		<header >
-			<div  id="logo"><img src="./Imagen5.png" width="150px" class="img-responsive"></div>
+			<div  id="logo"><img src="./logo.png" width="150px" class="img-responsive"></div>
 			<div style="position: absolute;">
 				<span class="icon material-symbols-outlined">search</span>
 				<span class="icon material-symbols-outlined">shopping_cart</span>
@@ -98,15 +108,37 @@
 		</header>
 		
 		<picture>
-			<source srcset="/imagenMobile.jpg" media="(max-width:400px)">
-			<img src="./imagen.jpg" width="100%" class="img-responsive">
+			<source srcset="./images/ropa-interior.png" media="(max-width:400px)">
+			<img src="./images/ropa-interior.png" width="100%" class="img-responsive">
+		</picture>
+		<picture>
+			<img src="./images/modelo-foto.png" width="100%" class="img-responsive">
+		</picture>
+		<picture>
+			<img src="./images/modelo2.png" width="100%" class="img-responsive">
+		</picture>
+		<picture>
+			<img src="./images/bikini.png" width="100%" class="img-responsive">
+		</picture>
+		<picture>
+			<img src="./images/frase.png" width="100%" class="img-responsive">
+		</picture>
+		<picture>
+			<img src="./images/modelo.png" width="100%" class="img-responsive">
+		</picture>
+		<picture>
+			<img src="./images/regalo.png" width="100%" class="img-responsive">
 		</picture>
 
 		<div id="billboard" class="billboard">
 			<span onclick="ocultar()" stu class="icon material-symbols-outlined" style="cursor: pointer;">close</span>
 			<center><h1>Feliz Cumpleaños!</h1></center>
-			<h5>El tallarine te regala tu tienda online</h5>
+			<h5>El tallarine te desea un feliz cumpleaños y en este día tan especial te da el mejor obsequio que puedas recibir, tu propia tienda online.</h5>
 		</div>
+
+		<footer >
+			<center><div  id="logo"><img src="./logo.png" width="150px" class="img-responsive"></div><center></center>
+		</footer>
 
 		<script>
 			function ocultar() {
