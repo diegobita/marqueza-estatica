@@ -1,8 +1,14 @@
-FROM node:18.12-alpine
+FROM node:18.12-alpine AS builder
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm install --frozen-lockfile
+COPY . .
+RUN npm run build
 
+FROM node:18.12-alpine
 WORKDIR /app
 
-COPY /dist /package.json ./
+COPY --from=builder /app/dist /app/package.json ./
 COPY /public ./public
 
 ENV NODE_ENV production
